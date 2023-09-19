@@ -4,7 +4,8 @@ var iva = prencioSinIva * 0.21;
 
 var precioConIva= prencioSinIva + iva;
 
- precioConIva.toFixed(2);
 
-alert(precioConIva);
+
+alert(precioConIva.toFixed(2));
+
 
