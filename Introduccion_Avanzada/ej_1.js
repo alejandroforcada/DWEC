@@ -4,9 +4,9 @@ function precioConIva(precioSinIva){
     
     var precioConIvaNum= precioSinIva + iva;
     
-    precioConIvaNum.toFixed(2);
+ 
     
-    return precioConIvaNum;
+    return precioConIvaNum.toFixed(2);
     }
     
     

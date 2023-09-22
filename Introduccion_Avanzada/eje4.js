@@ -1,5 +1,5 @@
 
-function myScript(){var nav = navigator.appName;
+function myScript(){var nav = navigator.appName; //usar userAgent e indexOf para saber si es el navegador correcto
 
 
 

@@ -22,4 +22,7 @@ switch (mes){
     case ("noviembre"):
         alert ("otoño");
         break;
+    default:
+    alert ("no es un mes valido");
+    break;
 }
