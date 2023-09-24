@@ -16,7 +16,14 @@ function myScript(){
     else{
         mensaje='Buenas noches ';
     }
+    var minutos=0;
+    if (d.getMinutes()<10){
+    minutos = '0'+ d.getMinutes();}
 
-    document.write(mensaje+'son las '+d.getHours(),':'+d.getMinutes(),' horas');
+    else{
+        minutos=d.getMinutes();
+    }
+
+    document.write(mensaje+'son las '+d.getHours(),':'+minutos,' horas');
 }
 
