@@ -1,4 +1,5 @@
 function myscript(operacion){
+    
 
     if (operacion==='añadir'){
         var parrafoCreado= document.createElement('li');
@@ -16,10 +17,10 @@ function myscript(operacion){
         var parrafoReemplazado= document.createElement('li');
         var contenidoParrafoReemplazado= document.createTextNode('ballena');
         parrafoReemplazado.appendChild(contenidoParrafoReemplazado);
-        document.getElementById('listaelemen').replaceChild(parrafoReemplazado,document.getElementById('listaelemen').getElementsByTagName('li')[1]);
+        document.getElementById('listaelemen').replaceChild(parrafoReemplazado,document.getElementById('listaelemen').getElementsByTagName('li')[0].nextSibling);
     }
     else if(operacion==='borrar'){
-        document.getElementById('listaelemen').removeChild(document.getElementById('listaelemen').getElementsByTagName('li')[1]);
+        document.getElementById('listaelemen').removeChild(document.getElementById('listaelemen').getElementsByTagName('li')[0].nextSibling);
 
     }
     else if (operacion==='clonar'){
@@ -29,22 +30,20 @@ function myscript(operacion){
 
     else if (operacion==='sublistaDOM'){
         var leon=document.getElementById('listaelemen').getElementsByTagName('li')[0]
-        if (leon.getElementsByTagName('ul').length === 0) {
+        
         var listaCreada= document.createElement('ul');
         var parrafoCreado= document.createElement('li');
         var contenidoParrafoCreado= document.createTextNode('elefante');
         parrafoCreado.appendChild(contenidoParrafoCreado);
         listaCreada.appendChild(parrafoCreado);
-        leon.appendChild(listaCreada);}
+        leon.appendChild(listaCreada);
 
     }
     else {
         var leon=document.getElementById('listaelemen').getElementsByTagName('li')[0]
-        if (leon.getElementsByTagName('ul').length === 0) {
-            var sublista = document.createElement('ul');
-            sublista.innerHTML = '<li>cocodrilo</li>';
-            leon.appendChild(sublista);
-        }
+        leon.innerHTML='<li>leon<ul><li>cocodrilo</li></ul></li>';
+           
+        
 }
 }
 
